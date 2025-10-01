@@ -1,4 +1,5 @@
 import SideNav from '@/app/ui/dashboard/sidenav';
+import { inter } from '@/app/ui/fonts';
  
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -6,10 +7,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div className="w-full flex-none md:w-64">
         <SideNav />
       </div>
-      <div className='border-s-orange-500 w-full h-16'>
-        {children}
-      </div>
-      <div className="flex-grow p-6 md:overflow-y-auto md:p-12">{children}</div>
+      <body className={`${inter.className} antialiased`}>{children}</body>
+      {/* <div className="flex-grow p-6 md:overflow-y-auto md:p-12">{children}</div> */}
     </div>
   );
 }
